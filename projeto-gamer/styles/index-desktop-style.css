@@ -1,0 +1,275 @@
+/* FONTS */
+@font-face {
+    font-family: "titilliumweb-black";
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+    font-family: "inter";
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: "quicksand";
+    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    .layout-grid {
+        width: 100%;
+        max-width: 1400px;
+    }
+
+    /* HEADER  */
+    header {
+        position: static;
+        height: 140px;
+    }
+
+    /* Header top */
+    header .header-top {
+        width: 100%;
+        height: 50px;
+        display: block;
+        background-color: #1B1426;
+        border-bottom: 2px solid #F9AA01;
+    }
+
+    header .header-top .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header .header-top .social-media {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    header .header-top .contacts {
+        display: flex;
+        gap: 60px;
+    }
+
+    header .header-top .contacts > * {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #fff;
+
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+
+    /* Esconde elementos desnecessários */
+    header .hamburguer-menu,
+    header .dots-menu,
+    header .header-bottom nav .phone,
+    header .header-bottom nav .email,
+    header .header-bottom nav .social-media {
+        display: none;
+    }
+
+    /* Header Bottom */
+    header .header-bottom {
+        height: 90px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header .header-bottom img .logo {
+        width: 187px;
+        height: 65px;
+        margin-left: 72px;
+    }
+
+    header .header-bottom nav {
+        position: static;
+        width: 440px;
+        height: 50px;
+        padding: 0;
+        flex-direction: row;
+        align-items: center;
+        /* background-color: red; */
+    }
+
+    header .header-bottom nav>a {
+        border: none;
+        font-size: 14px;
+    }
+
+    header .header-bottom nav>a:hover {
+        background-color: transparent;
+        color: #F9AA01;
+    }
+
+    header .header-bottom .user-menu {
+        position: static;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 120px;
+        height: auto;
+        background-color: transparent;
+    }
+
+    /* MAIN */
+    main {
+        margin-top: 0;
+    }
+
+    /* banner */
+    main .banner {
+        height: 722px;
+        /* alterar a imagem de fundo */
+        background-image: url(../assets/images/desktop-images/desktop-banner.png);
+        background-size: cover;
+        background-position: top;
+
+    }
+    
+    main .banner h1 {
+        font-size: 80px;
+    }
+
+    /* games */
+    main .games {
+        height: 500px;
+        flex-direction: row;
+    }
+
+    main .games img {
+        width: 556px;
+        height: 313px;
+    }
+
+    
+    /* info */
+    main .info {
+        height: 1000px;
+    }
+
+    main .info h2 {
+        font-size: 40px;
+    }
+
+    main .info .cards-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 100px;
+    }
+
+    main .info .first-card-container,
+    main .info .second-card-container {
+       margin-top: 350px;
+    }
+
+    main .info .first-card-container > img {
+        width: 422px;
+        right: 84px;
+        bottom: -24px;
+    }
+
+    main .info .second-card-container > img {
+        height: 692px;
+        left: 72px;
+        bottom: 6px;
+    }
+
+    main .info article.card {
+        width: 360px;
+        height: 440px;
+        padding: 56px;
+    }
+
+    main .info article.card img.card-icon {
+        width: 142px;
+        height: 142px;
+    }
+
+    main .info article.card h3.card-title {
+        font-size: 25px;
+    }
+
+    main .info article.card p.card-text {
+        font-size: 16px;
+    }
+
+    /* news */
+    main .news {
+        height: auto;
+        padding: 100px 0;
+        background-image: url(../assets/images/news-desktop.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: cover;
+    }
+
+    main .news h2 {
+        font-size: 40px;
+    }
+
+    main .news .layout-boxes {
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+
+    main .news .box-1 {
+        width: 285px;
+    }
+
+    /* footer */
+    
+    footer {
+        position: relative;
+        padding: 147px 119px 72px;
+        background-image: url(../assets/images/footer-desktop.png);
+        background-position-x: -3px;
+        background-size: calc(100% + 6px) 100%;
+    }
+
+    footer .footer-top {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0px;
+        height: 285px;
+    } 
+
+    footer #about {
+        width: 285px;
+    }
+
+    footer #about img.logotype {
+        width: 196px;
+        height: 56px;
+        align-self: flex-start;
+    }
+
+    footer #about .social-media-footer {
+        justify-content: flex-start;
+    }
+
+    /* Useful links article */
+    footer #useful-links {
+        height: 285px;
+    }
+
+    footer #useful-links .ul-configs {
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    footer #contacts {
+        height: 285px;
+    }
+
+    footer #newsletter {
+        width: 284px;
+        height: 285px;
+    }
+}

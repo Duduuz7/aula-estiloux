@@ -1,0 +1,411 @@
+/* FONTS */
+@font-face {
+    font-family: "titilliumweb-regular";
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Regular.ttf);
+}
+
+@font-face {
+    font-family: "titilliumweb-black";
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Black.ttf);
+}
+
+@font-face {
+    font-family: "titilliumweb-bold";
+    src: url(../assets/fonts/Titillium_Web/TitilliumWeb-Bold.ttf);
+}
+
+@font-face {
+    font-family: "inter";
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+@font-face {
+    font-family: "quicksand";
+    src: url(../assets/fonts/Quicksand/Quicksand-VariableFont_wght.ttf);
+}
+
+/* RESET and general configs */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+}
+
+/* Generic classes */
+
+.layout-grid {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.mostrar-menu {
+    left: 0 !important;
+}
+
+.show-user {
+    right: 0 !important;
+}
+
+/* Mobile First */
+
+/* HEADER */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    width: 100vw;
+    height: 60px;
+    background-color: #1B1426;
+}
+
+/* Header Top */
+
+header .header-top {
+    display: none;
+}
+
+/* Header Bottom */
+
+/* justify content + align itens */
+.between-center-alignment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .header-bottom {
+    height: 100%;
+}
+
+header .header-bottom img.logo {
+    width: 86px;
+}
+
+header .header-bottom nav {
+    position: fixed;
+    top: 60px;
+    left: -80vw;
+    width: 80vw;
+    height: calc(100vh - 60px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 20px;
+
+    background-image: linear-gradient(to bottom right, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.3));
+    backdrop-filter: blur(45px);
+
+    transition: left 0.4s;
+}
+
+/* somente links "filhos diretos" */
+header .header-bottom nav > a {
+    color: white;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+
+    padding: 30px 0;
+    border-bottom: 2px solid #F9AA01;
+}
+
+header .header-bottom nav > a:last-of-type {
+    border-bottom: none;
+}
+
+header .header-bottom nav .social-media {
+    display: flex;
+    justify-content: center;
+    gap: 50px; /* gap é o espaçamento entre os elementos, funciona em linha e também em coluna. */
+}
+
+/* 3 dots menu - right */
+header .header-bottom .user-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+    position: fixed;
+    top: 60px;
+    right: -66px;
+
+    width: 66px;
+    height: 213px;
+
+    background-image: linear-gradient(to bottom right, rgba(27, 20, 38, 0.7), rgba(27, 20, 38, 0.3));
+    backdrop-filter: blur(45px);
+
+    transition: right 0.4s;
+}
+
+/* MAIN */
+main {
+    width: 100%;
+    height: 687px;
+
+    margin-top: 60px;
+    padding: 82px 20px;
+
+    background-image: url(../assets/images/login-box-image.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+
+main .login-box {
+    width: 335px;
+    height: 462px;
+    
+    padding: 40px 30px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+    border: 1px solid white;
+    border-radius: 8px;
+    
+    background: linear-gradient(112.72deg, rgba(60, 3, 65, 0.38) 0.76%, rgba(27, 20, 38, 0.6) 98.99%);
+}
+
+main .login-box-title h1 {
+    font-family: "titilliumweb-black";
+    font-size: 24px;
+    color: white;
+    text-transform: uppercase;
+}
+
+main .login-box-title hr {
+    border: 1px solid #F9AA01;
+} 
+
+main .login-box .inputs {
+    width: 100%;
+
+    gap: 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main .login-box .inputs .email-input,
+main .login-box .inputs .password-input{
+    display: flex;
+    align-items: center;
+
+    padding: 0;
+
+    border: 1px solid white;
+    border-radius: 8px;
+
+    background: linear-gradient(106.3deg, rgba(239, 239, 239, 0.6) 11.46%, rgba(239, 239, 239, 0.1) 88.49%);
+}
+
+main .login-box .inputs img {
+    height: 20px;
+    margin: 0 10px;
+}
+
+main .login-box .inputs input {
+    width: 80%;
+    height: 100%;
+
+    padding: 12px 0;
+
+    background-color: transparent;
+    border: none;
+
+    font-family: "titilliumweb-regular";
+    font-size: 16px;
+    color: white;
+}
+
+main .login-box .inputs input::placeholder {
+    font-family: "titilliumweb-regular";
+    font-size: 16px;
+    color: white;
+}
+
+main .login-box .login-button {
+    width: 273px;
+    height: 40px;
+
+    background-color: #F9AA01;
+    border-radius: 8px;
+
+    font-family: "titilliumweb-bold";
+    font-size: 24px;
+
+    margin-bottom: 50px;
+}
+
+/* FOOTER */
+footer {
+    box-shadow: inset 0 30px 60px rgba(0, 0, 0, 1);
+    background-image: url(../assets/images/backgroung_footer.svg);
+    background-position: top;
+    background-size: contain;
+
+    padding-top: 100px;
+    padding-bottom: 30px;
+}
+
+footer #about {
+    width: 100%;
+    height: 304px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer #about > img{
+    width: 110px;
+    height: 32px;
+}
+
+footer #about p {
+    font-family: "quicksand";
+    font-weight: 400;
+    font-size: 14px;
+}
+
+footer .social-media-footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+footer .footer-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1530px;
+}
+
+footer .footer-top .footer-titles h3 {
+    font-family: "titilliumweb-black";
+    font-size: 30px;
+}
+
+footer .footer-top .footer-titles hr {
+    border: 2px solid #F9AA01;
+    width: 112px;
+}
+
+/* lista ul */
+footer .footer-top .ul-configs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+footer .footer-top .ul-configs li {
+    list-style-type: none;
+    width: 110px;
+    margin-bottom: 20px;
+}
+
+footer .footer-top .ul-configs a {
+    color: white;
+    text-decoration: none;
+    font-family: "titilliumweb-bold";
+    font-size: 16px;
+}
+
+footer .footer-top .ul-configs a:before {
+    content: "\2015";
+    margin-right: 10px;
+    color: #F9AA01;
+}
+
+footer .footer-top #contacts {
+    color: white;
+    font-family: "titilliumweb-bold";
+    font-size: 16px;
+}
+
+footer .footer-top #contacts p {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+footer .footer-top #contacts p span {
+    color: #F9AA01;
+}
+
+footer #newsletter input,
+footer #newsletter button {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+footer #newsletter input {
+    background-color: transparent;
+    background-image: linear-gradient(to right bottom, rgba(239, 239, 239, .6), rgba(239, 239, 239, .1));
+    backdrop-filter: blur(6px);
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    font-family: "titilliumweb-regular";
+    font-size: 16px;
+}
+
+footer #newsletter input::placeholder {
+    color: white;
+    font-family: "inter";
+    font-size: 14px;
+}
+
+footer #newsletter button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F9AA01;
+    font-family: "titilliumweb-bold";
+    font-size: 16px;
+}
+
+footer .footer-bottom {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+footer .footer-bottom button.return-top-button {
+    width: 40px;
+    height: 40px;
+    margin-top: 80px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 8px;
+}
+
+footer .footer-bottom p {
+    font-family: "titilliumweb-regular";
+    font-size: 16px;
+}
